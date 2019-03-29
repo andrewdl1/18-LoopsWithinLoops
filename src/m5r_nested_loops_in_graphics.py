@@ -10,7 +10,7 @@ import rosegraphics as rg
 
 
 def main():
-    """ Calls the other functions to demonstrate them. """
+    """ Calls the other functions to  demonstrate them. """
     nested_loops_in_graphics_example()
 
 

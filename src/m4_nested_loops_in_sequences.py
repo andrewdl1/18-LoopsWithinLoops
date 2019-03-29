@@ -16,7 +16,7 @@ def main():
 
 
 def run_test_multiply_numbers():
-    """ Tests the   multiply_numbers   function. """
+    """ Tests the   multiply_numbers    function. """
     # ------------------------------------------------------------------
     # We have supplied tests for you. No additional tests are required,
     # although you are welcome to supply more tests if you choose.

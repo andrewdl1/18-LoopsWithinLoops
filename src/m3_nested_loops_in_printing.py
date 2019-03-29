@@ -18,7 +18,7 @@ def main():
 
 
 def run_test_rectangle_of_stars():
-    """ Tests the    rectangle_of_stars    function. """
+    """ Tests the    rectangle_of_stars     function. """
     print()
     print('--------------------------------------------')
     print('Testing the   RECTANGLE_OF_STARS   function:')
