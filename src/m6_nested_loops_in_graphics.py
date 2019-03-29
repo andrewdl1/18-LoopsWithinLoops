@@ -138,17 +138,26 @@ def draw_wall_on_right(rectangle, n, window):
     # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
-    up_left = rectangle.get_upper_left_corner()
-    low_right = rectangle.get_lower_right_corner()
+    left = rectangle.get_lower_left_corner()
+    right = rectangle.get_upper_right_corner()
+
+    x = rg.Point(right.x, right.y)
+    y = rg.Point(left.x, left.y)
+
+    width = rectangle.get_width()
+    height = rectangle.get_height()
+
     for k in range(n):
-        for j in range(n - k):
-            up_left.x = rectangle.get_upper_left_corner().x - (rectangle.get_width() * k)
-            up_left.y = rectangle.get_upper_left_corner().y - (rectangle.get_width() * (j + k))
-            low_right.x = rectangle.get_lower_right_corner().x - (rectangle.get_width() * k)
-            low_right.y = rectangle.get_lower_right_corner().y + (rectangle.get_height() * (k + j))
-            rectangle1 = rg.Rectangle(rg.Point(up_left.x, up_left.y), rg.Point(low_right.x, low_right.y))
-            rectangle1.attach_to(window)
-            window.render(0.1)
+        for i in range(k + 1):
+            new = rg.Rectangle(x, y)
+            new.attach_to(window)
+            window.render(.1)
+            x.x = x.x - width
+            y.x = y.x - width
+        x.x = left.x
+        y.x = right.x
+        y.y = y.y + height
+        x.y = x.y + height
 
 
 # ----------------------------------------------------------------------
